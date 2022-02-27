@@ -1,0 +1,24 @@
+[
+    {
+        "cardTitle":"John Doe",
+        "cardTxt":"Some example text some example text. John Doe is an architect and engineer",
+        "cardImage":"images/pro.jpg"
+    },
+
+    {
+        "cardTitle":"Intel Doe",
+        "cardTxt":"Some example text some example text. John Doe is an architect and engineer",
+        "cardImage":"images/inel2.jpg"
+    },
+
+    {
+        "cardTitle":"John Intel",
+        "cardTxt":"Some example text some example text. John Doe is an architect and engineer",
+        "cardImage":"images/intel1.jpg"
+    },
+    {
+        "cardTitle":"John Boy",
+        "cardTxt":"Some example text some example text. John Doe is an architect and engineer",
+        "cardImage":"images/intel1.jpg"
+    }
+]

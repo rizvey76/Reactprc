@@ -1,0 +1,27 @@
+.mainCard{
+    position: absolute;
+    margin-top: 40%;
+    width: 100%;
+   }
+
+
+
+.imgCard{
+    width:80%;
+    padding: 0;
+    margin: 10%;
+    
+}
+
+/* 8.33333333 */
+.cardd{
+    width:21.46rem;
+}
+
+.cardsp{
+    width:1rem;
+}
+
+/* .fcard{
+     margin-left: 10px;
+} */

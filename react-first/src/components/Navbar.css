@@ -1,0 +1,36 @@
+.navbar{
+    
+    background-color: greenyellow;
+    
+}
+
+.logo{
+    background-color: rgb(83, 83, 204);
+}
+.products {
+    background-color: rgb(152, 152, 218);
+}
+.support {
+    background-color: rgb(87, 87, 105);
+}
+.solutions {
+    background-color: rgb(226, 226, 235);
+}
+.developers {
+    background-color: rgb(59, 59, 245);
+}
+.partners {
+    background-color: rgb(13, 13, 126);
+}
+.space {
+    background-color: rgb(21, 21, 37);
+}
+.signIn {
+    background-color: rgb(144, 144, 253);
+}
+.language {
+    background-color: rgb(7, 7, 82);
+}
+.search{
+    background-color: rgba(45, 45, 143, 0.836);
+}
