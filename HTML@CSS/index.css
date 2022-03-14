@@ -1,0 +1,226 @@
+/*-----------------------*/
+/*Custom properties*/
+/*----------------------*/
+:root{
+	/*---color---*/
+	--clr-dark: 230 35% 7%;
+	--clr-light: 231 77% 90%;
+	--clr-white: 0 0% 100%;
+
+	/*--font-sizes--*/
+  --fs-900:9.375rem;
+  --fs-600:6.375rem;
+  --fs-200:2.375rem;
+  /*--font-family--*/
+  --ff-geo-cond:Georgia, serif;;
+}
+
+/*----------BoxSizing-------*/
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+
+/*----------ReesetMargins-----*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture{
+	margin: 0;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+	font-weight: 400;
+}
+
+/*----------set up the body-------*/
+body{
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+/*-------make images easier to work with------*/
+picture,
+img{
+	display: block;
+	max-width: 100%;
+}
+
+/*-----make form elements eaiser to work with----*/
+input,
+button,
+textarea,
+select{
+	font: inherit;
+}
+
+/*----remove animation for people who have turned off----*/
+@media(prefers-reduced-motion: reduce){
+	*,
+*::before,
+*::after{
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.01ms !important;
+	scroll-behavior: auto !important;
+}
+
+}
+
+/*----utility Class----*/
+.flex{
+    display: flex;
+    gap: var(--gap,1rem);
+}
+
+.grid{
+	display: grid;
+	gap: var(--gap,1rem);
+}
+
+.container{
+	padding-inline: 2em;
+	margin-inline: auto;
+	max-width: 80rem;
+}
+
+/**-------after using this property DOM will invisible but DOM element will exist-----**/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap; /*added line */
+  border: 0;
+}
+
+.box{
+	background-color: lightblue;
+	padding: 3rem;
+}
+
+/* colors */
+.bg-dark{
+	background-color: hsl(var(--clr-dark));
+}
+
+.bg-accent{
+	background-color: hsl(var(--clr-light));
+}
+
+.bg-white{
+	background-color: hsl(var(--clr-white));
+}
+
+
+.text-dark{
+	color: hsl(var(--clr-dark));
+}
+
+.text-accent{
+	color: hsl(var(--clr-light));
+}
+
+.text-white{
+	color: hsl(var(--clr-white));
+}
+
+.example-color{
+	background-color: hsl(231 77% 90%/0.2);
+}
+
+
+.numbered-title{
+	font-family: var(--ff-geo-cond);
+	font-size: var(--fs-900);
+	text-transform: uppercase;
+	letter-spacing: 4.72px;
+}
+
+.numbered-title span{
+	margin-right: .5em;
+	font-weight: 700;
+	color: hsl(var(--clr-white)/.25);
+}
+
+.flow > *:where(:not(:first-child)){
+  margin-top: 1rem;
+  outline: 1px solid red;
+}
+
+/*--interactive tools---*/
+.large-button{
+	 margin-top: 10rem;
+	 margin-left: 10rem;
+	 position: relative; /*---positon:relative ; should use in parent element ; top,right,bottom,left,z-index properties comes with the position properties--*/
+	 display: grid; /*--use grid on inline element(inline-grid)--*/
+	 place-items: center;
+   padding: 0 2em;
+   border-radius: 50%;
+   aspect-ratio: 1;
+   text-decoration: none;
+   z-index:1;
+}
+
+.large-button::after{  /*--::before ,::after pseudo elements use to design in the element--*/
+	content: '';
+	position: absolute;
+	background: hsl(var(--clr-light)/0.15);
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 500ms linear,transform 500ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after{
+	opacity: 1;
+	transform: scale(1.5);
+}
+
+.primary-navigation{
+	--gap: 8rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.primary-navigation a{
+	 text-decoration: none;
+}
+
+.underline-indicators >*{
+	cursor: pointer;
+	padding: 1em 0;
+	border-bottom: 0.2rem solid hsl(var(--clr-white));
+}
+
+.underline-indicators > *:hover ,
+.underline-indicators > *:focus{
+   border-color: hsl(var(--clr-white)/.25);
+}
+
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"]{
+   border-color: hsl(var(--clr-white)/1);
+}
