@@ -7,6 +7,7 @@ const Nav=()=>{
         <>
         <NavLink activeClassName='nav_class' to="/">About</NavLink>
         <NavLink activeClassName='nav_class' to="/contact">Contact</NavLink>
+        <NavLink activeClassName='nav_class' to="/profile">Profile</NavLink>
         </>
     );
 }
