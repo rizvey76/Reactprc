@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Example of web worker</h2>
+    <p><output id="output"></output></p>
+    <script>
+        var worker;
+        if(window.worker){
+             console.log("Worker is available!");
+        }else{
+            worker=new Worker("./example2.js");
+            worker.postMessage("Do some Work");
+            worker.addEventListener('message',function(event){
+                console.log(event);
+                // console.log(event.data.message);
+                document.getElementById("output").innerHTML=event.data.message;
+                worker.terminate();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- By default behaviour is event bubbling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <P id="parent">The General Dynamics F-16 Fighting Falcon is a<span id="child">single-engine </span>
+            multirole fighter aircraft originally developed by General 
+            Dynamics for the United States Air Force (USAF). Designed as
+             an air superiority day fighter, it evolved into a successful
+              all-weather multirole aircraft. Over 4,600 aircraft have been
+               built since production was approved in 1976.[4] Although no
+                longer being purchased by the U.S. Air Force, improved versions
+                 are being built for export customers.[5] In 1993, General Dynamics 
+                 sold its aircraft manufacturing business to the Lockheed Corporation
+                 ,[6] which in turn became part of Lockheed Martin after a 1995 merger
+                  with Martin Marietta.[7]</P>
+    </div>
+
+    <script>
+        // event bubbling
+        // document.getElementById("parent").addEventListener('click',()=>{
+        //     console.log("Parent has been clicked!");
+        // });
+
+        // document.getElementById("child").addEventListener('click',()=>{
+        //     console.log("Child has been clicked!");
+        // });
+
+        // event capturing
+
+        document.getElementById("parent").addEventListener('click',()=>{
+            console.log("Parent has been clicked!");
+        },true);
+
+        document.getElementById("child").addEventListener('click',()=>{
+            console.log("Child has been clicked!");
+        });
+    </script>
+</body>
+</html>

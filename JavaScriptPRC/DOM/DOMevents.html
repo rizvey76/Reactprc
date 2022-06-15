@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Example One</h1>
+        <h2 onclick="this.innerHTML='Hello JavaScript'">Hello World</h2>
+    </div>
+    <hr/>
+    <div>
+        <h1>Example Two</h1>
+        <h2 onclick="changeTxt(this)">Hello World</h2>
+    </div>
+
+    <hr/>
+    <div>
+        <h1>Example Three</h1>
+        <h2 id="txt">Hello World</h2>
+    </div>
+
+    <script>
+        
+        function changeTxt(obj){
+            obj.innerHTML="Hello JavaScript";
+        }
+///////////////////Example3///////////////////////////
+        (function(){
+            document.getElementById("txt").onclick=()=>{document.getElementById("txt").innerHTML="Hello JavaScript"};
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Example of web worker</h2>
+
+    <p id="output"></p>
+
+    <script>
+        let worker;
+        document.addEventListener('DOMContentLoaded',int);
+
+        function int(){
+            worker=new Worker("./example3.js");
+            worker.addEventListener('message',workerMessaged);
+            worker.addEventListener('error',workerError);
+            worker.postMessage('Get Started');
+            worker.postMessage('Data');
+       
+        };
+
+        function workerMessaged(ev){
+            document.getElementById('output').textContent=ev.data+'\n';
+        };
+
+        function workerError(err){
+          console.log(err.message,err.filename);
+        };
+    </script>
+</body>
+</html>

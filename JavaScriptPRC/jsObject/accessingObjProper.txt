@@ -1,0 +1,31 @@
+///Accessing js Object Properties///
+
+->objectName.propertyName;
+->objectName["property"];
+->objectName[dynamicVariable];
+
+->Object is not Iterable so for,for..of,for...each  can't itarate object property one by one  
+
+///Build In Js Constructor///
+->new String();
+->new Number();
+->new Boolean();
+->new Array();
+->new RegExp();
+->new Date();
+->new function(){
+    this.prop1 = "test1";
+    this.prop2 = "test2"
+};
+
+and
+
+var Example = function () {
+    this.prop1 = "test1";
+    this.prop2 = "test2"
+};
+
+var newObj2 = new Example();
+
+//js Reserved words
+onblur,onclick,onerror,onfocus,onkeydown,onKeypass,onKeyup,onmouseover,onload,onmouseup,onmousedown,onsubmit
